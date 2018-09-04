@@ -1,0 +1,127 @@
+body {
+    background-image: url("assets/bckgrnd.png");
+    font-family: 'open sans', sans-serif;
+    color: #333333;
+    display:grid;
+    grid-template-areas: 
+    "myPic"
+    "nav"
+    "main"    
+    "section"
+    ;
+    grid-template-rows: 150px 20px auto auto
+    
+}
+h1 {
+    font-family: 'montserrat', sans-serif;
+    font-size: 36px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    margin-left: 10px;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    margin-left: 10px;
+}
+h3 {
+    font-size: 26px;
+    font-weight: 200px;
+    margin-left: 10px;
+    border-bottom: 2px solid white;
+    padding: 15px;
+}
+
+section {
+    background-color: rgba(150, 150, 150, .6);
+    color: #ffffff;
+    grid-area:section;
+}
+
+.portfolio {
+    width: 290px;
+    height: 160px;
+    margin: 15px;
+    padding: 0px 25px 15px 15px; 
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+main {
+    margin: 10px;
+    grid-area: main;
+}
+
+nav {
+    margin-top: 20px;
+    grid-area:nav;
+    justify-self: center;
+}
+nav a{
+    padding: 10px;
+}
+
+#myPic {
+    border: 3px solid #2c5fa8;
+    border-radius: 50%;
+    margin-top: 40px;
+    width: 100px;
+    height: 100px;
+    grid-area: myPic;
+    justify-self: center;
+}
+
+#arrow {
+    vertical-align: middle;
+}
+
+footer {
+    border-top: 2px solid white;
+    padding-top: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 600px){
+    body {
+        background-color: #2c5fa8;
+        grid-template-areas: 
+        "nav nav"        
+        "main ." 
+        ". myPic"   
+        "section section";
+        grid-template-rows: 50px auto 50px auto ;
+        grid-template-columns: 60% auto;
+    }
+
+    nav {
+        margin: 20px;
+        grid-area:nav;
+        justify-self: left;
+    }
+
+    main {
+        margin: 10px;
+        grid-area: main;
+        text-align: left;
+    }
+
+    #myPic {
+        border: 3px solid #2c5fa8;
+        border-radius: 50%;
+        margin-right: 40px;
+        margin-top: -50px;
+        width: 180px;
+        height: 180px;
+        grid-area: myPic;
+        justify-self: right;
+        z-index: 100;
+    }
+}
